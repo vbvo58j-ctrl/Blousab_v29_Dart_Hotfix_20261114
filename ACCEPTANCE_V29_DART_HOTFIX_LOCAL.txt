@@ -1,0 +1,49 @@
+Blousab v29 hotfix validation; 2026-11-14
+Flutter SDK: UNAVAILABLE
+NOTE: These checks are not a Flutter build.
+
+===== REGRESSION: PASS =====
+PASS: PROGRESS_CALLBACK_NULL_SAFE_CALLS
+PASS: FRIEND_REQUEST_TIME_WIDGET
+NOTE: Source guards only. A real Flutter analyze/build is still required.
+
+===== STATIC: PASS =====
+STATIC_DART_BALANCE=PASS; DART_FILES=34
+ICON_AND_XML=PASS
+NOTE: static check is NOT a Dart compiler; run Flutter analyze/build too.
+
+===== V26: PASS =====
+PASS NEON_DESIGN_COMPONENTS
+PASS MAIN_APP_COVER_AND_SETTINGS
+PASS CHATS_BACKGROUND_AND_BUBBLES
+PASS BLUETOOTH_SCAN_SINGLE_FLIGHT
+PASS BLUETOOTH_PROFILE_PROTOCOL
+PASS LAN_ANNOUNCEMENT_GUARD
+PASS MESH_HOPS_AND_COSTS
+PASS NOTIFICATION_CHAT_IS_EPHEMERAL
+INFO: source contracts do NOT prove build, live discovery, delivery, security or visual pixel parity
+
+===== V29: PASS =====
+PASS AI_OS_RESUMABLE_DOWNLOAD 
+PASS ANDROID_DOWNLOAD_MANAGER 
+PASS AI_CHAT_ROW_PROGRESS 
+PASS CENTRAL_ROUTER 
+PASS TARGET_BINDING 
+PASS ONE_GROUP_RECEIVER 
+PASS SERIAL_MESSAGE_STORAGE 
+PASS FILE_CHUNK_SHA256_APK 
+PASS IN_APP_VIDEO_PREPARATION 
+PASS FEED_STORY_ADAPTIVE_SYNC 
+PASS STORY_BOUNDED_SYNC 
+PASS EPHEMERAL_MESSAGES_INLINE_REPLY 
+PASS TOAST_SUCCESS_FAILURE 
+PASS CODEC_VECTOR_compressible
+PASS CODEC_VECTOR_already_random
+INFO: Flutter, native Android, multi-device transport, UI and security remain UNTESTED by this script
+
+===== SECURITY: FAIL =====
+BLOCKER: Wi-Fi Aware PSK is derived from discoverable peer IDs, not an authenticated secret.
+BLOCKER: LAN frames are not demonstrably end-to-end encrypted or authenticated.
+BLOCKER: Bluetooth RFCOMM transports JSON without verified application-layer E2E.
+FAIL: PRODUCTION_SECURITY_GATE: do not assert 100% security or ship as E2E-secure
+
